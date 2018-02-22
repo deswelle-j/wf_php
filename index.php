@@ -28,7 +28,7 @@
                 echo '<h1>Le login et/ou mot de passe est incorrect</h1>'; 
                 form();
             }else{
-                echo '<h1>Compte :' . $_POST['user'] . '</h1>';
+                echo '<h1>Compte :' . htmlspecialchars($_POST['user']) . '</h1>';
             ?>
                 <h1>page d'administration du site</h1>
             <?php
@@ -42,7 +42,6 @@
             fclose($countFile);
             echo '<h2>Le compte admin a été ouvert ' . $openFile . ' fois!';
             ?>
-
             <?php
             }
         ?>
